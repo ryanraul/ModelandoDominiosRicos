@@ -1,9 +1,10 @@
 using System;
 using PaymentContext.Domain.ValueObjects;
+using PaymentContext.Shared.Entities;
 
 namespace PaymentContext.Domain.Entities{
 
-    public abstract class Payment{
+    public abstract class Payment : Entity{
         protected Payment(DateTime paidDate, DateTime expireDate, decimal total, decimal totalPaid, Address address, string payer, Document document, Email email)
         {
             //Pegar um novo Guid -> Transformar para String -> Retirar os "-" -> Pegar os 10 primeiros caracters -> Transformar para maiusculo

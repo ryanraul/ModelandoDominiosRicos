@@ -3,9 +3,9 @@ using Flunt.Notifications;
 
 namespace PaymentContext.Shared.Entities{
     public abstract class Entity : Notifiable{
-        protected Entity(Guid id)
+        protected Entity()
         {
-            Id = id;
+            Id = Guid.NewGuid();
         }
 
         public Guid Id { get; private set; }
