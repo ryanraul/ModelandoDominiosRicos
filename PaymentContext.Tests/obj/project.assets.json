@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "Flunt/1.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/15.9.0": {
         "type": "package",
         "compile": {
@@ -1622,7 +1631,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "PaymentContext.Shared": "1.0.0"
+          "PaymentContext.Shared": "1.0.0",
+          "flunt": "1.0.5"
         },
         "compile": {
           "bin/placeholder/PaymentContext.Domain.dll": {}
@@ -1634,6 +1644,9 @@
       "PaymentContext.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "flunt": "1.0.5"
+        },
         "compile": {
           "bin/placeholder/PaymentContext.Shared.dll": {}
         },
@@ -1644,6 +1657,18 @@
     }
   },
   "libraries": {
+    "Flunt/1.0.5": {
+      "sha512": "2p1B/LLsMf0bGwyMQK48/278OXTodXn3HyTU1v7fr/x0bNfrVSNC1Do1PxbgiOlDLChtAbtt1kPgXFqUnGAagg==",
+      "type": "package",
+      "path": "flunt/1.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "flunt.1.0.5.nupkg.sha512",
+        "flunt.nuspec",
+        "lib/netstandard2.0/Flunt.dll"
+      ]
+    },
     "Microsoft.CodeCoverage/15.9.0": {
       "sha512": "oherNadUtHKqFQbtdRKXgPvZVWyGkOeS83pFWT864587npS7JIFWIJ/LJV0c25cWNkCytn2S9XGSSkKscnNFAQ==",
       "type": "package",
@@ -5851,7 +5876,8 @@
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.1.0",
       "PaymentContext.Domain >= 1.0.0",
-      "PaymentContext.Shared >= 1.0.0"
+      "PaymentContext.Shared >= 1.0.0",
+      "flunt >= 1.0.5"
     ]
   },
   "packageFolders": {
@@ -5919,6 +5945,10 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "flunt": {
+            "target": "Package",
+            "version": "[1.0.5, )"
           }
         },
         "imports": [
