@@ -18,6 +18,7 @@ namespace PaymentContext.Tests{
 
         public StudentQueriesTests()
         {
+            _students = new List<Student>();
             for(var i = 0; i<=10; i++){
                 _students.Add(new Student(
                     new Name("Aluno", i.ToString()),
@@ -40,7 +41,7 @@ namespace PaymentContext.Tests{
             var exp = StudentQueries.GetStudentInfo("11111111111");
             var studn = _students.AsQueryable().Where(exp).FirstOrDefault();
             
-            Assert.AreEqual(null, studn);
+            Assert.AreNotEqual(null, studn);
         }
     }
 }
